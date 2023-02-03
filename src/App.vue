@@ -12,7 +12,7 @@ const chartOptions = reactive({
     },
   },
   xaxis: {
-    categories: [],
+    type: "datetime",
   },
 });
 const series = reactive([
@@ -60,16 +60,15 @@ const setAccountData = () => {
   let seriesData = [];
   let insights = selectedAccount.value.insights.data;
   insights.forEach((selectedAccountData) => {
-    dates.push(selectedAccountData.date_start);
-    console.log("selectedAccountData", selectedAccountData);
-    seriesData.push(selectedAccountData[selectedMetric.value]);
+    // dates.push(new Date(selectedAccountData.date_start).getTime());
+    seriesData.push([
+      new Date(selectedAccountData.date_start).getTime(),
+      selectedAccountData[selectedMetric.value],
+    ]);
   });
   series[0].name = selectedMetric.value;
   series[0].data = seriesData;
-  chartOptions.xaxis.categories = dates;
-
-  console.log("series", series);
-  console.log("chartOptions", chartOptions);
+  console.log("chart options :", chartOptions);
 };
 const setAccount = (account) => {
   selectedAccount.value = account;
