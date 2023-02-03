@@ -1,0 +1,43 @@
+.gradient-top::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    #ffffff 45.83%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(0.5px);
+}
+.gradient-bottom::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    #ffffff 45.83%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(0.5px);
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+.social-icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 28px auto;
+  background: #f9fafb;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-icon img {
+  width: 40px;
+}

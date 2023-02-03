@@ -1,0 +1,29 @@
+.seperator {
+  width: 1px;
+  border-left: 1px solid #d0d5dd;
+  height: 20px;
+}
+.filter-item.active {
+  background-color: #131313;
+  color: #fff;
+}
+.filter-item.active:hover {
+  opacity: 0.8;
+  background-color: #131313;
+  color: #fff;
+}
+.filter-item:hover {
+  transition: all 0.2s;
+  background-color: #e6e8e9;
+  color: #999;
+}
+.filter-item {
+  padding: 10px 8px;
+  border-radius: 20px;
+  background-color: #f9fafb;
+  color: #d0d5dd;
+  margin: 0 6px;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
