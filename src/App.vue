@@ -109,7 +109,7 @@ const setSelectedMetric = (metric) => {
         </div>
       </div>
       <div class="col-span-2 md:block hidden">
-        <SocialIcons :icons="leftIcons"></SocialIcons>
+        <SocialIcons :icons="rightIcons"></SocialIcons>
       </div>
     </div>
   </div>
